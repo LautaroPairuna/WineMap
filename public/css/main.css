@@ -1,0 +1,596 @@
+/* -----------------------------------------------------------------------------------------------  
+   LAYOUT
+-----------------------------------------------------------------------------------------------*/
+*{
+    transition: all 0.3s;
+    font-family: 'Roboto', sans-serif;
+}
+nav ul li {
+    list-style: none;
+    transition: all 0.3s;
+}
+.shadow-1{
+    text-shadow: 0 0 7px rgba(0, 0, 0, 0.75);
+}
+.bg-layout{
+    background-color: #fff;
+    padding: 20px !important;
+}
+.menu-superior{
+    display: flex;
+    justify-content: space-between;
+}
+.menu-superior-elements{
+    display: inline-block;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.menu-superior-list{
+    background-color: #fff;
+    display: flex;
+    justify-content:flex-end;
+    flex-direction: row;
+    margin-inline: 15px;
+    margin-top: 25px;
+    align-items: center;
+    transition: all 0.3s;
+    transform: translateY(0);
+}
+.menu-superior-list--show{
+    transform: translateY(0);
+    transition: all 0.3s;
+}
+.toggle-menu{
+    display: none;
+}
+.menu-inferior{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.menu-inferior-listas{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.list-footer{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: flex-start;
+}
+.btn-footer{
+    justify-content: center;
+    color: #69222B;
+    text-decoration: none;
+}
+.navbar-element{
+    text-decoration: none;
+    color: #69222B;
+    padding: 10px;  
+    border-radius: 5px;
+}
+.navbar-element:hover{
+    transition: 0.5s;
+    background: #69222B;
+    background-size: 10%;
+    color: #fff;
+}
+.navbar-icon-home{
+    padding: 10px;
+}
+.navbar-btn{
+    color: #69222B;
+}
+.navbar-btn:hover{
+    background: #69222B;
+    color: #fff;
+}
+.img-layout-width{
+    width: 200px;
+}
+/* -----------------------------------------------------------------------------------------------  
+   BIENVENIDA
+-----------------------------------------------------------------------------------------------*/
+.flex-container-home{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.flex-container-home div{
+    margin-inline: 15px;
+}
+.btn-bienvenida{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.img-home{
+    border-radius: 30px;
+}
+
+/* -----------------------------------------------------------------------------------------------  
+   BACKGROUNDS - COLORES - BOTONES - IMAGENES
+-----------------------------------------------------------------------------------------------*/
+.bg-bienvenida{
+    background: url("../images/slider-cafayate-1.jpg") right 0 no-repeat;
+    background-size: cover;
+    padding: 10rem 0;
+}
+.text-home{
+    color: #fff;
+    font-size: 20px;
+}
+.shadow-1{
+    text-shadow: 0 0 7px rgba(0, 0, 0, 1.5);
+}
+.btn-body{
+    color: black;
+    background: #D2B367;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+}
+/* -----------------------------------------------------------------------------------------------  
+   CATEGORIAS
+-----------------------------------------------------------------------------------------------*/
+.bg-categorias{
+    background: #69222B;
+    background-size: cover;
+    padding: 5rem 0;
+}
+.categorias-title{
+    font-size: 30px;
+    color: #fff;
+}
+.card-tittle{
+    color: #fff;
+    font-size: 25px;
+}
+.lista-categorias{
+    flex-direction: row;
+}
+.list-unstyled{
+    list-style: none;
+}
+.lista-categorias .categoria{
+    position: relative;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.lista-categorias .categoria img{
+    border-radius: 20px;
+}
+.lista-categorias .categoria .btn{
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    z-index: 1;
+}
+.lista-categorias h3{
+    position: absolute;
+    top: 100px;
+    left: 230px;
+}
+/* -----------------------------------------------------------------------------------------------  
+   PRODUCTOS DESTACADOS
+-----------------------------------------------------------------------------------------------*/
+.flex-container-products{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px;
+}
+.flex-container-products-btn{
+    display: flex;
+    justify-content: space-evenly;
+}
+.productos-title{
+    font-size: 30px;
+    color: #fff;
+}
+.bg-productos{
+    background: url("../images/bg-vino-destacado.jpg") right 0 no-repeat;;
+    background-size: cover;
+    padding: 8rem 0;
+}
+/* -----------------------------------------------------------------------------------------------  
+   CAROUSEL RESPONSIVE
+-----------------------------------------------------------------------------------------------*/
+.bg-white{
+    background: #fff;
+}
+.carousel_content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel_list{
+    overflow: hidden;
+}
+.carousel_next:hover,
+.carousel_prev:hover {
+    opacity: 100%;
+}
+.carousel_next,
+.carousel_prev {
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: none;
+    top: calc(50% - 20px);
+    line-height: 30px;
+    text-align: center;
+    background: none;
+    opacity: 70%;
+    z-index: 1;
+}
+.carousel_prev {
+    left: -60px;
+}
+.carousel_next {
+    right: -25px;
+}
+.carousel_indicators .glider-dot {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: #D2B367;
+    opacity: 70%;
+    border-radius: 0;
+    margin-top: 20px;
+}
+.glider-dot.active {
+    background: #D2B367
+}
+.carousel_indicators .glider-dot:hover{
+    color: #D2B367 !important;
+    opacity: 100%;
+}
+.carousel_indicators .glider-dot.active {
+    color: #D2B367 !important;
+    opacity: 100%;
+}
+/* -----------------------------------------------------------------------------------------------  
+   DETALLES DEL PRODUCTO
+-----------------------------------------------------------------------------------------------*/
+.flex-container-products-detail-img{
+    display: flex;
+    justify-content: stretch;
+    flex-direction: row-reverse;
+}
+.flex-container-products-detail{
+    display: flex;
+    justify-content: flex-start;
+    text-align: start;
+    flex-direction: column;
+}
+.flex-container-products-detail-btn{
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+}
+.product-detail-title{
+    font-size: 25px;
+}
+.product-detail-text{
+    font-size: 18px;
+}
+.text-white{
+    color: #fff;
+}
+.img-detail-product-width{
+    width: 350px;
+}
+/* -----------------------------------------------------------------------------------------------  
+   CARRITO
+-----------------------------------------------------------------------------------------------*/
+.bg-carrito{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+.flex-container-table{
+    display: flex;
+    width: 90%
+}
+.flex-container-cart{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.flex-container-cart-product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-container-cart-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: start;
+}
+.padding-cart{
+    padding: 20px;
+}
+.img-width{
+    width: 150px;
+}
+tr, th, td{
+    padding: 20px;
+    border-bottom: solid #d0d0d0 1px !important;
+}
+.padding-amount{
+    padding-inline: 90px;
+}
+/* -----------------------------------------------------------------------------------------------  
+   LOGIN Y REGISTER - PARTE TRASERA
+-----------------------------------------------------------------------------------------------*/
+.body-register-login{
+    background: url("../images/bg-login-register.jpg") no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.box{
+    max-width: 800px;
+    position: relative;
+}
+.box-back{
+    background: rgba(204, 169, 83, 0.85);
+    display: flex;
+    height: 500px;
+    justify-content: center;
+    padding: 10px 20px;
+    margin-top: 100px;
+}
+.box-back div{
+    margin: 140px 60px;
+    transition: all 0.5s;
+}
+.box-back div p,
+.box-back div button{
+    margin-top: 20px;
+    color: #fff;
+}
+.box-back div h3{
+    font-weight: 400;
+    font-size: 26px;
+    color: #fff;
+}
+.box-back button{
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s;
+}
+.box-back button:hover{
+    border: 2px solid #7C2833;
+    background-color: #7C2833;
+}
+/* -----------------------------------------------------------------------------------------------  
+   LOGIN Y REGISTER - PARTE DELANTERA
+-----------------------------------------------------------------------------------------------*/
+.box-login--register{
+    display: flex;
+    align-items: center;
+    max-width: 380px;
+    position: relative;
+    top: -260px;
+    left: 10px;
+    transition: left 500ms;
+}
+.box-login--register form{
+    padding: 90px 20px;
+    background: #69222B;
+    position: absolute;
+    border-radius: 20px;
+}
+.box-login--register form h2{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.box-login--register form input{
+    width: 95%;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background: #fff;
+}
+.box-login--register form button{
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    font-size: 14px;
+    background-color: #D2B367;
+    color: black;
+    outline: none;
+    cursor: pointer;
+}
+.formulario-login{
+    opacity: 1;
+    display: block;
+}
+.formulario-register{
+    display: none;
+}   
+/* -----------------------------------------------------------------------------------------------  
+   CONTACTO
+-----------------------------------------------------------------------------------------------*/
+.bg-form{
+    background: url("../images/slider-cafayate-3.jpg") right 0 no-repeat;
+    background-size: cover;
+    padding: 50px;
+}
+.form-title{
+    justify-content: left;
+    text-align: start;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 900;
+    border-width: 2px;
+}
+.form-desc{
+    justify-content: left;
+    text-align: start;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 900;
+}
+.formulario-contacto{
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    align-items: center;
+}
+.form-div{
+    display: flex;
+    flex-direction: column;
+    margin-inline: 30px;
+}
+.form-div input{
+    margin-top: 15px;
+}
+.form-div textarea{
+    margin-top: 15px;
+}
+.form-div button{
+    margin-top: 15px;
+}
+.form-div input{
+    width: 550px;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: solid 1px;
+    border-radius: 10px;
+    border-color: #d0d0d0;
+    background: #fff;
+}
+.form-div textarea{
+    width: 550px;
+    height: 80px;
+    padding: 10px;
+    font-size: 16px;
+    border: solid 1px;
+    border-radius: 10px;
+    outline: none;
+    border-color: #d0d0d0;
+    background: #fff;
+}
+.form-div button{
+    width: 150px;
+    padding: 10px 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: #69222B;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.text-error{
+    color: white;
+}
+
+/* -----------------------------------------------------------------------------------------------  
+   FLEX-CONTAINERS
+-----------------------------------------------------------------------------------------------*/
+.flex-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.flex-container div{
+    margin-inline: 20px;
+}
+.float-left{
+    float: left;
+}
+/* -----------------------------------------------------------------------------------------------  
+   MARGENES - TAMAÑOS
+-----------------------------------------------------------------------------------------------*/
+.mb-3{
+    margin-bottom: 30px;
+}
+.mt-3{
+    margin-top: 30px;
+}
+.mt-1-5{
+    margin-top: 15px;
+}
+.mx-3{
+    margin-inline: 10px;
+}
+.m-3{
+    margin: 7px;
+}
+.mx-5{
+    margin-inline: 30px;
+}
+.mx-5-carrousel{
+    margin-inline: 60px;
+}
+.w-15{
+    width: 15%;
+}
+.w-20{
+    width: 20%;
+}
+.w-30{
+    width: 30%;
+}
+.w-40{
+    width: 40%;
+}
+.w-60{
+    width: 60%;
+}
+.w-50{
+    width: 50%;
+}
+.w-70{
+    width: 70%;
+}
+.w-80{
+    width: 80%;
+}
+.w-90{
+    width: 90%;
+}
+.w-32{
+    width: 32px;
+}
+.w-24{
+    width: 24px;
+}
+.w-18{
+    width: 18px;
+}
+.w-16{
+    width: 16px;
+}

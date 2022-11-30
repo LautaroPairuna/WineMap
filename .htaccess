@@ -1,0 +1,11 @@
+RewriteEngine on
+Options +SymLinksIfOwnerMatch -MultiViews
+
+# Si la URL NO es un archivo
+RewriteCond %{REQUEST_FILENAME} !-f
+# Si la URL NO es un directorio
+RewriteCond %{REQUEST_FILENAME} !-d
+
+header('Content-Type: text/html');
+
+Header set Access-Control-Allow-Origin "*" 

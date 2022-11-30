@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('./partials/head.ejs'); %>
+</head>
+<header>
+    <%- include('./partials/header.ejs'); %>
+</header>
+<body>
+    <section class="bg-categorias flex-container-cart">
+
+        <!-- Carrito para escritorio -->
+
+        <div class="bg-carrito w-80">
+            <h2>Carrito</h2>
+            <table>
+                <tr>
+                    <th class="w-60">Productos</th>
+                    <th class="w-40 padding-amount">Cantidad</th>
+                    <th>Precio</th>
+                </tr>
+                <tr>
+                    <td class="flex-container-cart-product">
+                        <img src="public/images/106-laborum-cabernet-sauvignon.jpg" alt="" class="img-width">
+                        <div class="flex-container-cart-text">
+                            <h4>Laborum Cabernet Sauvignon</h4>
+                            <p>Precio: $2200</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="flex-container-cart-product">
+                            <button class="btn-body mx-3">-</button>
+                            <p class="mx-3">1</p>
+                            <button class="btn-body mx-3">+</button>
+                            <button class="btn-body mx-3"><img src="public/images/iconos/ico-delete.svg" alt="" class="w-16"></button>
+                        </div>
+                    </td>
+                    <td>$2200</td>
+                </tr>
+                <tr>
+                    <td class="flex-container-cart-product">
+                        <img src="public/images/106-laborum-cabernet-sauvignon.jpg" alt="" class="img-width">
+                        <div class="flex-container-cart-text">
+                            <h4>Laborum Cabernet Sauvignon</h4>
+                            <p>Precio: $2200</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="flex-container-cart-product">
+                            <button class="btn-body mx-3">-</button>
+                            <p class="mx-3">1</p>
+                            <button class="btn-body mx-3">+</button>
+                            <button class="btn-body mx-3"><img src="public/images/iconos/ico-delete.svg" alt="" class="w-16"></button>
+                        </div>
+                    </td>
+                    <td>$2200</td>
+                </tr>
+                <tr>
+                    <td class="flex-container-cart-product">
+                        <img src="public/images/106-laborum-cabernet-sauvignon.jpg" alt="" class="img-width">
+                        <div class="flex-container-cart-text">
+                            <h4>Laborum Cabernet Sauvignon</h4>
+                            <p>Precio: $2200</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="flex-container-cart-product">
+                            <button class="btn-body mx-3">-</button>
+                            <p class="mx-3">1</p>
+                            <button class="btn-body mx-3">+</button>
+                            <button class="btn-body mx-3"><img src="public/images/iconos/ico-delete.svg" alt="" class="w-16"></button>
+                        </div>
+                    </td>
+                    <td>$2200</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Carriro para movil -->
+
+        <div>
+            <table>
+
+            </table> 
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
+    <script src="public/js/toggle-menu.js"></script>
+</body>
+<footer>
+    <%- include('./partials/footer'); %>
+</footer>
+</html>
