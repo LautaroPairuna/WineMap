@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const bcrypt = require('bcrypt');
 const {body} = require('express-validator');
 const register_controller = require('../controllers/register')
 const login_controller = require('../controllers/login')
@@ -20,7 +19,6 @@ router.post('/register', [
 ], register_controller)
 
 router.post('/login', login_controller)
-
 
 
 module.exports = router;

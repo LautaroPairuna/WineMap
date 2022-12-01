@@ -54,94 +54,19 @@
                     <img src="../public/images/iconos/ico-previous.svg" alt="Anterior">
                 </button>
                 <div class="carousel_list" id="contenedor_productos">
+                <% products.forEach(product => { %>
                     <div class="carousel_element mx-3">
                         <div class="bg-white flex-container-products">
-                            <img src="../public/images/106-laborum-cabernet-sauvignon.jpg" alt="">
-                            <h3>Laborum Cabernet Suavignon</h3>
-                            <p>Precio: $3200</p>
+                            <img src="../public/images/<%- products.foto %>" alt="">
+                            <h3><%-products.producto %></h3>
+                            <p>Precio: <%- products.precio %></p>
                             <div class="flex-container-products-btn">
                                 <a href="" class="btn-body mx-3 w-30"><img src="../public/images/iconos/ico-cart-shop-products.svg" alt="" class="w-24"></a>
                                 <a href="/product_detail" class="btn-body mx-3 w-70">Ver Más</a>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel_element mx-3">
-                        <div class="bg-white flex-container-products">
-                            <img src="../public/images/106-laborum-cabernet-sauvignon.jpg" alt="">
-                            <h3>Laborum Cabernet Suavignon</h3>
-                            <p>Precio: $3200</p>
-                            <div class="flex-container-products-btn">
-                                <a href="" class="btn-body mx-3 w-30"><img src="../public/images/iconos/ico-cart-shop-products.svg" alt="" class="w-24"></a>
-                                <a href="/product_detail" class="btn-body mx-3 w-70">Ver Más</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel_element mx-3">
-                        <div class="bg-white flex-container-products">
-                            <img src="../public/images/106-laborum-cabernet-sauvignon.jpg" alt="">
-                            <h3>Laborum Cabernet Suavignon</h3>
-                            <p>Precio: $3200</p>
-                            <div class="flex-container-products-btn">
-                                <a href="" class="btn-body mx-3 w-30"><img src="../public/images/iconos/ico-cart-shop-products.svg" alt="" class="w-24"></a>
-                                <a href="/product_detail" class="btn-body mx-3 w-70">Ver Más</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel_element mx-3">
-                        <div class="bg-white flex-container-products">
-                            <img src="../public/images/106-laborum-cabernet-sauvignon.jpg" alt="">
-                            <h3>Laborum Cabernet Suavignon</h3>
-                            <p>Precio: $3200</p>
-                            <div class="flex-container-products-btn">
-                                <a href="" class="btn-body mx-3 w-30"><img src="../public/images/iconos/ico-cart-shop-products.svg" alt="" class="w-24"></a>
-                                <a href="/product_detail" class="btn-body mx-3 w-70">Ver Más</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel_element mx-3">
-                        <div class="bg-white flex-container-products">
-                            <img src="../public/images/106-laborum-cabernet-sauvignon.jpg" alt="">
-                            <h3>Laborum Cabernet Suavignon</h3>
-                            <p>Precio: $3200</p>
-                            <div class="flex-container-products-btn">
-                                <a href="" class="btn-body mx-3 w-30"><img src="../public/images/iconos/ico-cart-shop-products.svg" alt="" class="w-24"></a>
-                                <a href="/product_detail" class="btn-body mx-3 w-70">Ver Más</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel_element mx-3">
-                        <div class="bg-white flex-container-products">
-                            <img src="../public/images/106-laborum-cabernet-sauvignon.jpg" alt="">
-                            <h3>Laborum Cabernet Suavignon</h3>
-                            <p>Precio: $3200</p>
-                            <div class="flex-container-products-btn">
-                                <a href="" class="btn-body mx-3 w-30"><img src="../public/images/iconos/ico-cart-shop-products.svg" alt="" class="w-24"></a>
-                                <a href="/product_detail" class="btn-body mx-3 w-70">Ver Más</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel_element mx-3">
-                        <div class="bg-white flex-container-products">
-                            <img src="../public/images/106-laborum-cabernet-sauvignon.jpg" alt="">
-                            <h3>Laborum Cabernet Suavignon</h3>
-                            <p>Precio: $3200</p>
-                            <div class="flex-container-products-btn">
-                                <a href="" class="btn-body mx-3 w-30"><img src="../public/images/iconos/ico-cart-shop-products.svg" alt="" class="w-24"></a>
-                                <a href="/product_detail" class="btn-body mx-3 w-70">Ver Más</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel_element mx-3">
-                        <div class="bg-white flex-container-products">
-                            <img src="../public/images/106-laborum-cabernet-sauvignon.jpg" alt="">
-                            <h3>Laborum Cabernet Suavignon</h3>
-                            <p>Precio: $3200</p>
-                            <div class="flex-container-products-btn">
-                                <a href="" class="btn-body mx-3 w-30"><img src="../public/images/iconos/ico-cart-shop-products.svg" alt="" class="w-24"></a>
-                                <a href="/product_detail" class="btn-body mx-3 w-70">Ver Más</a>
-                            </div>
-                        </div>
-                    </div>
+                <% }) %>
                 </div>
                 <button aria-label="siguiente" class="carousel_next">
                     <img src="../public/images/iconos/ico-next.svg" alt="Siguiente">
