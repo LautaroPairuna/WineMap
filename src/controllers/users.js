@@ -2,12 +2,6 @@ const user = require('../models').usuario
 const bcrypt = require('bcrypt')
 const { validationResult } = require('express-validator')
 
-function renderLoginRegisterPage(req, res) {
-
-    res.render('login_and_register')
-
-}
-
 async function newUser(req, res) {
 
     try{
@@ -99,4 +93,4 @@ async function login(req, res) {
     
 };
 
-module.exports = {newUser, login, renderLoginRegisterPage}
+module.exports = {newUser, login}

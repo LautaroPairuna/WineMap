@@ -1,5 +1,3 @@
-const { literal } = require('sequelize')
-
 const product = require('../../models').producto
 
 const outstandingProductsArray = async (req, res) => {
