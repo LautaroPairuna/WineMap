@@ -1,13 +1,16 @@
-const product = require('../models').producto
+const { literal } = require('sequelize')
 
-const productsArray = async (req, res) => {
+const product = require('../../models').producto
+
+const outstandingProductsArray = async (req, res) => {
 
     try{
         const products = await product.findAll({
             raw: true, 
             where: {
                 destacado: 1
-            }
+            },
+            limit: 8,
         })
 
         res.status(200).render('index', {products})
@@ -20,4 +23,4 @@ const productsArray = async (req, res) => {
 
 }
 
-module.exports(productsArray)
+module.exports = {outstandingProductsArray}

@@ -1,45 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalles del Producto</title>
-    <link rel="stylesheet" href="public/css/main.css">
-    <link rel="stylesheet" href="public/css/media_queries.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.css">
+    <%- include('./partials/head.ejs'); %>
 </head>
 <header>
-    <section class="bg-layout">
-        <nav class="menu-superior">
-            <div id="menu-superior-elements" class="menu-superior-elements">
-                <div>
-                    <a href="index.html"><img src="public/images/logo-wine-map.png" alt="Logo de Wine Map" class="img-layout-width"></a>
-                </div>
-                <div id="toggle-menu" class="toggle-menu">
-                    <img src="public/images/iconos/ico-toggle.svg" alt="">
-                </div>
-            </div>
-            <ul id="menu-superior-list" class="menu-superior-list">
-                <li class="mx-3">
-                    <a href="index.html" class="navbar-element">Home</a>
-                </li>
-                <li class="mx-3">
-                    <a href="" class="navbar-element">Vinos</a>
-                </li>
-                <li class="mx-3">
-                    <a href="" class="navbar-element">Blog</a>
-                </li>
-                <li class="mx-3">
-                    <a href="" class="navbar-element">Contacto</a>
-                </li>
-                <li class="mx-3">
-                    <a href="" class="navbar-icon-home"><img src="public/images/iconos/ico-cart-shop.svg" alt="" class="w-24"></a>
-                    <a href="" class="navbar-icon-home"><img src="public/images/iconos/ico-user.svg" alt="" class="w-24"></a>
-                </li>
-            </ul>
-        </nav>
-    </section>
+    <%- include('./partials/header.ejs'); %>
 </header>
 <body>
     <section class="bg-categorias">
@@ -164,30 +129,6 @@
     <script src="public/js/toggle-menu.js"></script>
 </body>
 <footer>
-    <section class="bg-layout">
-        <div class="menu-inferior">
-            <div>
-                <img src="public/images/logo-wine-map.png" alt="Logo de Wine Map">
-                <p>Provincia de Salta, Argentina</p>
-            </div>
-            <div class="menu-inferior-listas">
-                <div class="list-footer mx-5">
-                    <h3>Nuestras Redes</h3>
-                    <div class="list-footer">
-                        <a href="" class="btn-footer m-3"><img src="public/images/iconos/ico-facebook.svg" alt="Facebook" class="w-24 mx-3">Facebook</a>
-                        <a href="" class="btn-footer m-3"><img src="public/images/iconos/ico-instagram.svg" alt="Instagram" class="w-24 mx-3">Instagram</a>
-                        <a href="" class="btn-footer m-3"><img src="public/images/iconos/ico-twitter.svg" alt="Twitter" class="w-24 mx-3">Twitter</a>
-                    </div>
-                </div>
-                <div class="list-footer mx-5">
-                    <h3>Contacto</h3>
-                    <div class="list-footer">
-                        <a href="" class="btn-footer m-3"><img src="public/images/iconos/ico-phone.svg" alt="Mail" class="w-24 mx-3">+54 387-6138620</a>
-                        <a href="" class="btn-footer m-3"><img src="public/images/iconos/ico-mail.svg" alt="Teléfono" class="w-24 mx-3">info@carritowinemap.com</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <%- include('./partials/footer'); %>
 </footer>
 </html>

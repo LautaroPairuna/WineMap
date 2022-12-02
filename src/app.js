@@ -27,13 +27,8 @@ app.use(require ('./routes/carrito'))
 app.use(require ('./routes/contacto'))
 app.use(require ('./routes/login_register'))
 app.use(require ('./routes/product_detail'))
-
-app.get('/', function (req, res) {
-
-    res.render('index');
+app.use('/', require('./routes/index'))
     
-})
-
 app.listen(process.env.PUERTO, function() {
     console.log('Servidor iniciado en puerto: ' + process.env.PUERTO)
 })

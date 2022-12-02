@@ -57,9 +57,9 @@
                 <% products.forEach(product => { %>
                     <div class="carousel_element mx-3">
                         <div class="bg-white flex-container-products">
-                            <img src="../public/images/<%- products.foto %>" alt="">
-                            <h3><%-products.producto %></h3>
-                            <p>Precio: <%- products.precio %></p>
+                            <img src="../public/images/<%- product.foto %>" alt="">
+                            <h3><%-product.producto %></h3>
+                            <p>Precio: <%- product.precio %></p>
                             <div class="flex-container-products-btn">
                                 <a href="" class="btn-body mx-3 w-30"><img src="../public/images/iconos/ico-cart-shop-products.svg" alt="" class="w-24"></a>
                                 <a href="/product_detail" class="btn-body mx-3 w-70">Ver Más</a>
