@@ -18,14 +18,3 @@ const fecthData = async () => {
     }
 
 }
-
-const contenedorProductos = document.querySelector('#contenedor_productos')
-const printProducts = (products) => {
-    const template = document.querySelector('#template_productos_destacados').content
-    const fragment = document.createDocumentFragment()
-    console.log(template)
-    products.forEach(producto => {
-        console.log(producto)
-        template.querySelector('img').setAttribute('src', product.foto)
-    })
-}

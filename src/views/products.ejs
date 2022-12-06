@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('./partials/head.ejs'); %>
+</head>
+<header>
+    <%- include('./partials/header'); %>
+    </section>
+</header>
+<body>
+    <section class="bg-categorias">
+        <div class="flex-container mb-3">
+            <h2 class="categorias-title shadow-1">PRODUCTOS DESTACADOS</h2>
+        </div>
+        <div class="container-products">
+            <% allProducts.forEach(product => { %>
+                <div class="bg-white flex-container-products">
+                    <img src="../public/images/<%- product.foto %>" alt="">
+                    <h3><%-product.producto %></h3>
+                    <p>Precio: <%- product.precio %></p>
+                    <div class="flex-container-products-btn">
+                        <a href="" class="btn-body mx-3 w-30"><img src="../public/images/iconos/ico-cart-shop-products.svg" alt="" class="w-24"></a>
+                        <a href="/products/<%- product.id %>" class="btn-body mx-3 w-70">Ver Más</a>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </section>
+    <script src="public/js/toggle-menu.js"></script>
+</body>
+<footer>
+    <%- include('./partials/footer'); %> 
+</footer> 
+</html>

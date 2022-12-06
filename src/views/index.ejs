@@ -54,7 +54,7 @@
                     <img src="../public/images/iconos/ico-previous.svg" alt="Anterior">
                 </button>
                 <div class="carousel_list" id="contenedor_productos">
-                <% products.forEach(product => { %>
+                <% Outstandingproducts.forEach(product => { %>
                     <div class="carousel_element mx-3">
                         <div class="bg-white flex-container-products">
                             <img src="../public/images/<%- product.foto %>" alt="">
@@ -62,7 +62,7 @@
                             <p>Precio: <%- product.precio %></p>
                             <div class="flex-container-products-btn">
                                 <a href="" class="btn-body mx-3 w-30"><img src="../public/images/iconos/ico-cart-shop-products.svg" alt="" class="w-24"></a>
-                                <a href="/product_detail" class="btn-body mx-3 w-70">Ver Más</a>
+                                <a href="/productos/<%- product.id %>" class="btn-body mx-3 w-70">Ver Más</a>
                             </div>
                         </div>
                     </div>

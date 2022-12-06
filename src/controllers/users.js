@@ -1,4 +1,4 @@
-const user = require('../models').usuario
+const users = require('../models').usuario
 const bcrypt = require('bcrypt')
 const { validationResult } = require('express-validator')
 
@@ -6,7 +6,7 @@ async function newUser(req, res) {
 
     try{
 
-        const userdata = req.body
+        const {nombre_completo, email, contrasena} = req.body
 
         const errors = validationResult(req)
 
@@ -15,11 +15,11 @@ async function newUser(req, res) {
             const valores = req.body
             const validaciones = errors.array()
 
-            res.render('login_and_register', { validaciones: validaciones, valores: valores })
+            return res.render('login_and_register', { validaciones: validaciones, valores: valores })
 
         }
 
-        const registro_consulta = await user.findAll({ where: { email: [userdata.email] }});
+        const registro_consulta = await users.findAll({ where: { email: [email] }});
             
         if(registro_consulta.length > 0) {
 
@@ -27,11 +27,11 @@ async function newUser(req, res) {
 
         }else {
 
-            bcrypt.hash(userdata.contrasena, 12).then(async hash => {
+            bcrypt.hash(contrasena, 12).then(async hash => {
             
-                userdata.contrasena = hash;
+                const contrasena = hash;
     
-                let usuario = await user.create (userdata)
+                let usuario = await users.create ({nombre_completo, email, contrasena})
     
                 return res.status(200).send(usuario)
                 
@@ -54,22 +54,11 @@ async function login(req, res) {
 
         const {email_login, contrasena_login} = req.body
 
-        const registro_consulta = await user.findAll({ 
+        const users_consulta = await users.findAll({ where:{email: email_login} });
 
-            where: { 
+        if(users_consulta.length > 0) {
 
-                email: email_login, 
-                contrasena: contrasena_login
-
-            }
-
-        });
-
-        usuario = registro_consulta.filter(data => data.email === email_login)
-
-        if(usuario.length > 0) {
-
-            const isTruePassword = bcrypt.compareSync(contrasena_login, user.contrasena)
+            const isTruePassword = bcrypt.compareSync(contrasena_login, users.contrasena)
 
             if(!isTruePassword){
 
@@ -77,13 +66,16 @@ async function login(req, res) {
 
             }else{
 
-                return res.send('Bienvenido!')
+                return res.status(200).redirect('/')
 
             }
 
+        }else{
+
+            return res.send('Este usuario no existe!')
+
         }
 
-        res.status(200).redirect('/')
 
     }catch (error) {
 

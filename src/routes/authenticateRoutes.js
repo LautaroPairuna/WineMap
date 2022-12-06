@@ -3,7 +3,7 @@ const router = express.Router();
 const {body} = require('express-validator');
 const users_controller = require('../controllers/users')
 
-router.get('/login_register', function (req, res) {
+router.get('/authentication', function (req, res) {
 
     res.render('login_and_register');
     
@@ -11,21 +11,24 @@ router.get('/login_register', function (req, res) {
 
 router.post('/register', [
 
-    body('nombre_completo')
+    body('nombre_completo', 'Ingrese un nombre y un apellido')
         .exists()
-        .withMessage('Ingrese un nombre y un apellido')
+        .not()
+        .isEmpty()
         .isLength({min:5})
-        .withMessage('El Nombre y Apellido es demasiado corto'),
-    body('email')
+        .withMessage('El nombre y apellido es demasiado corto'),
+    body('email', 'Ingrese un email')
         .exists()
-        .withMessage('Ingrese un email')
+        .not()
+        .isEmpty()
         .isEmail()
         .withMessage('Ingrese un email valido'),
-    body('contrasena')
+    body('contrasena', 'Ingrese una contraseña')
         .exists()
-        .withMessage('Ingrese una contraseña')
+        .not()
+        .isEmpty()
         .isLength({min:8})
-        .withMessage('Ingrese un contraseña más segura')
+        .withMessage('Ingrese una  contraseña más segura')
 
 ], users_controller.newUser)
 
