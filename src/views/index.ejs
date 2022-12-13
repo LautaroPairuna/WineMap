@@ -31,12 +31,12 @@
             <div>
                 <div class="lista-categorias list-unstyled flex-container">
                     <div class="categoria mb-3">
-                        <img src="../public/images/bg-vinos.jpg" alt="">
+                        <img src="/images/bg-vinos.jpg" alt="">
                         <h3 class="card-tittle shadow-1 text-center mb-5">VINOS</h3>
                         <a class="btn btn-body" href="#" title="">Más</a>
                     </div>
                     <div class="categoria mb-3">
-                        <img src="../public/images/bg-bodega.jpg" alt="">
+                        <img src="/images/bg-bodega.jpg" alt="">
                         <h3 class="card-tittle shadow-1 text-center mb-5">BODEGAS</h3>
                         <a class="btn btn-body" href="#" title="">Más</a>
                     </div>
@@ -51,35 +51,35 @@
         <div class="carousel mx-5-carrousel">
             <div class="carousel_content">
                 <button aria-label="anterior" class="carousel_prev">
-                    <img src="../public/images/iconos/ico-previous.svg" alt="Anterior">
+                    <img src="/images/iconos/ico-previous.svg" alt="Anterior">
                 </button>
                 <div class="carousel_list" id="contenedor_productos">
                 <% Outstandingproducts.forEach(product => { %>
-                    <div class="carousel_element mx-3">
+                    <div class="carousel_element mx-3 items">
                         <div class="bg-white flex-container-products">
-                            <img src="../public/images/<%- product.foto %>" alt="">
+                            <img src="/images/<%- product.foto %>" alt="">
                             <h3><%-product.producto %></h3>
                             <p>Precio: <%- product.precio %></p>
-                            <div class="flex-container-products-btn">
-                                <a href="" class="btn-body mx-3 w-30"><img src="../public/images/iconos/ico-cart-shop-products.svg" alt="" class="w-24"></a>
-                                <a href="/productos/<%- product.id %>" class="btn-body mx-3 w-70">Ver Más</a>
+                            <div class="flex-container-products-btn btn-compra">
+                                <a href="#" class="btn-body mx-3 w-30"><img src="/images/iconos/ico-cart-shop-products.svg" alt="" class="w-24"></a>
+                                <a href="/products/<%- product.id %>" class="btn-body mx-3 w-70">Ver Más</a>
                             </div>
                         </div>
                     </div>
                 <% }) %>
                 </div>
                 <button aria-label="siguiente" class="carousel_next">
-                    <img src="../public/images/iconos/ico-next.svg" alt="Siguiente">
+                    <img src="/images/iconos/ico-next.svg" alt="Siguiente">
                 </button>
             </div>
             <div role="tablist" class="mt-3 carousel_indicators"></div>
         </div>
     </section>
-    <script type="module" src="../../public/js/productos_destacados.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
     <script src="../public/lib/Glider.js-master/glider.min.js"></script>
     <script src="../public/lib/Glider.js-master/carousel_glider.js"></script>
     <script src="../public/js/toggle-menu.js"></script>
+    <script src="../../public/js/addCart.js"></script>
 </body>
 <footer>
     <%- include('./partials/footer'); %>

@@ -54,11 +54,15 @@ async function login(req, res) {
 
         const {email_login, contrasena_login} = req.body
 
-        const users_consulta = await users.findAll({ where:{email: email_login} });
+        const user_consulta = await users.findOne({ where: {
+           
+            email: email_login
+            
+        }});
 
-        if(users_consulta.length > 0) {
+        if(user_consulta) {
 
-            const isTruePassword = bcrypt.compareSync(contrasena_login, users.contrasena)
+            const isTruePassword = bcrypt.compareSync(contrasena_login, user_consulta.contrasena)
 
             if(!isTruePassword){
 

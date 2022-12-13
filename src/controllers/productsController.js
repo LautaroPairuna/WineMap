@@ -18,24 +18,6 @@ const getAllProducts = async (req, res) => {
 
 }
 
-const getProductsList = async (req, res) => {
-
-    try{
-        const productsList = await products.findAll({
-            raw: true,
-            limit: 8,
-            order: Sequelize.literal('rand()')
-        })
-
-        return res.status(200).render('product_detail.ejs', {productsList})
-
-    }catch (error){
-
-        console.log(error)
-
-    }
-
-}
 
 const getProductDetail = async (req, res) => {
 
@@ -45,13 +27,19 @@ const getProductDetail = async (req, res) => {
 
         const product_query = await products.findOne({ where: { id: [id] } });
 
+        const productsList = await products.findAll({
+            raw: true,
+            limit: 8,
+            order: Sequelize.literal('rand()')
+        })
+
         if (!product_query) {
 
             return res.send('No existe este producto');
 
         }
 
-        return res.status(200).render('product_detail.ejs', {product_query});
+        return res.status(200).render('product_detail.ejs', {product_query, productsList});
         
 
     }catch (error) {
@@ -85,4 +73,4 @@ const getOutstandingProductsList = async (req, res) => {
 }
 
 
-module.exports = {getAllProducts, getProductsList ,getProductDetail, getOutstandingProductsList}
+module.exports = {getAllProducts, getProductDetail, getOutstandingProductsList}

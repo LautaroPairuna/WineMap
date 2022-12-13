@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const {body} = require('express-validator');
-const users_controller = require('../controllers/users')
+const usersController = require('../controllers/usersController')
 
 router.get('/authentication', function (req, res) {
 
@@ -30,9 +30,9 @@ router.post('/register', [
         .isLength({min:8})
         .withMessage('Ingrese una  contraseña más segura')
 
-], users_controller.newUser)
+], usersController.newUser)
 
-router.post('/login', users_controller.login)
+router.post('/login', usersController.login)
 
 
 module.exports = router;

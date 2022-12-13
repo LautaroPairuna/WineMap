@@ -135,6 +135,14 @@
         flex-direction: row;
         align-items: center;
     }
+    .img-width{
+        width: 100px;
+    }
+    .flex-container-cart-product{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
 }
 @media (max-width: 600px){
     .lista-categorias .categoria img{
