@@ -26,7 +26,7 @@ Utilizaremos colores representativos de Salta como el bordo o el dorado, y lo ac
 /* -----------------------------------------------------------------------------------------------  
 Tipografía
 
-Utilizaremos la Tipografía Vesper Libre de Mota Italic para el desarrollo del ecommerce, esta tipografía fue sacada de Google Fonts https://fonts.google.com/specimen/Vesper+Libre?query=ital
+Utilizaremos la Tipografía Roboto para el desarrollo del ecommerce, esta tipografía fue sacada de Google Fonts https://fonts.google.com/specimen/Roboto
 
 /* -----------------------------------------------------------------------------------------------  
 Logo
