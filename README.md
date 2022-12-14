@@ -1,5 +1,8 @@
 # WineMap
 
+Dejo un anexo del repositorio del Dashboard de administracion: https://github.com/LautaroPairuna/DashboardAngularCWM/tree/main
+
+
 /* -----------------------------------------------------------------------------------------------  
 Tematica del Ecommerce
 
