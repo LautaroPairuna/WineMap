@@ -1,6 +1,6 @@
 # WineMap
 
-Dejo un anexo del repositorio del Dashboard de administracion: https://github.com/LautaroPairuna/DashboardAngularCWM/tree/main
+Dejo un anexo del repositorio del Dashboard de administracion: https://github.com/LautaroPairuna/dashboardWineMap.git
 
 
 /* -----------------------------------------------------------------------------------------------  
