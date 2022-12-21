@@ -1,5 +1,7 @@
 # WineMap
 
+Para poder inicializar el proyecto debera abrir la consola dentro de la carpeta del proyecto y escribir "npm run dev"
+
 Dejo un anexo del repositorio del Dashboard de administracion: https://github.com/LautaroPairuna/dashboardWineMap.git
 
 
