@@ -6,6 +6,14 @@ Dejo un anexo del repositorio del Dashboard de administracion: https://github.co
 
 
 /* -----------------------------------------------------------------------------------------------  
+Herramientas y librerias usadas:
+
+Las herramientas utilizadas son HTML, CSS, JAVASCRIPT, NODEJS, MYSQL
+
+Y las librerias utilizadas son EXPRESS, EXPRESS-SESSION, EXPRESS-VALIDATOR, EJS, BCRYPT, BODY-PARSER, COOKIE-PARSER, SEQUELIZE y MYSQL2
+
+
+/* -----------------------------------------------------------------------------------------------  
 Tematica del Ecommerce
 
 La temática de Carrito Wine Map Salta sera una tienda digital donde se venderan vinos de todas las bodegas de Salta
