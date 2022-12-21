@@ -11,131 +11,86 @@
 
         <!-- Carrito para escritorio -->
 
-        <div class="bg-carrito w-80" id="carritoDesk">
+        <div class="bg-carrito w-90" id="carritoDesk">
             <h2>Carrito</h2>
             <table>
-                <tr>
-                    <th class="w-60">Productos</th>
-                    <th class="w-40 padding-amount">Cantidad</th>
-                    <th>Precio</th>
-                </tr>
-                <tr>
-                    <td class="flex-container-cart-product">
-                        <img src="public/images/106-laborum-cabernet-sauvignon.jpg" alt="" class="img-width">
-                        <div class="flex-container-cart-text">
-                            <h4>Laborum Cabernet Sauvignon</h4>
-                            <p>Precio: $2200</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="flex-container-cart-product">
-                            <a href=""><button class="btn-body mx-3">-</button></a>
-                            <p class="mx-3">1</p>
-                            <a href=""><button class="btn-body mx-3">+</button></a>
-                            <a href=""><button class="btn-body mx-3"><img src="public/images/iconos/ico-delete.svg" alt="" class="w-16"></button></a>
-                        </div>
-                    </td>
-                    <td>$2200</td>
-                </tr>
-                <tr>
-                    <td class="flex-container-cart-product">
-                        <img src="public/images/106-laborum-cabernet-sauvignon.jpg" alt="" class="img-width">
-                        <div class="flex-container-cart-text">
-                            <h4>Laborum Cabernet Sauvignon</h4>
-                            <p>Precio: $2200</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="flex-container-cart-product">
-                            <a href=""><button class="btn-body mx-3">-</button></a>
-                            <p class="mx-3">1</p>
-                            <a href=""><button class="btn-body mx-3">+</button></a>
-                            <a href=""><button class="btn-body mx-3"><img src="public/images/iconos/ico-delete.svg" alt="" class="w-16"></button></a>
-                        </div>
-                    </td>
-                    <td>$2200</td>
-                </tr>
-                <tr>
-                    <td class="flex-container-cart-product">
-                        <img src="public/images/106-laborum-cabernet-sauvignon.jpg" alt="" class="img-width">
-                        <div class="flex-container-cart-text">
-                            <h4>Laborum Cabernet Sauvignon</h4>
-                            <p>Precio: $2200</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="flex-container-cart-product">
-                            <a href=""><button class="btn-body mx-3">-</button></a>
-                            <p class="mx-3">1</p>
-                            <a href=""><button class="btn-body mx-3">+</button></a>
-                            <a href=""><button class="btn-body mx-3"><img src="public/images/iconos/ico-delete.svg" alt="" class="w-16"></button></a>
-                        </div>
-                    </td>
-                    <td>$2200</td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th class="w-60">Productos</th>
+                        <th class="w-40 padding-amount">Cantidad</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody class="DOMcarrito" id="carrito">
+                    <tr>
+                        <td class="flex-container-cart-product">
+                            <img src="public/images/106-laborum-cabernet-sauvignon.jpg" alt="" class="img-width">
+                            <div class="flex-container-cart-text">
+                                <h4>Laborum Cabernet Sauvignon</h4>
+                                <p>Precio: $2200</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="flex-container-cart-product">
+                                <button class="btn-carrito"><img src="public/images/iconos/ico-minun.svg" alt="" class="w-24"></button>
+                                <p class="mx-3">1</p>
+                                <button class="btn-carrito"><img src="public/images/iconos/ico-plus.svg" alt="" class="w-24"></button>
+                                <button class="btn-carrito"><img src="public/images/iconos/ico-delete.svg" alt="" class="w-24"></button>
+                            </div>
+                        </td>
+                        <td>
+                            <p>$2200</p>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
+            <div class="flex-subtotal">
+                <p class="text-right">Total: <span id="total"></span>&dollar;;</p>
+                <button id="boton-vaciar" class="btn btn-body">VACIAR CARRITO</button>
+            </div>
         </div>
 
         <!-- Carriro para movil -->
 
-        <div class="bg-carrito w-80" id="carritoMovil">
+        <div class="bg-carrito w-90" id="carritoMovil">
             <h2>Carrito</h2>
             <table>
-                <tr>
-                    <th>Productos</th>
-                    <th>Precio</th>
-                </tr>
-                <tr>
-                    <td class="flex-container-cart-product">
-                        <img src="public/images/106-laborum-cabernet-sauvignon.jpg" alt="" class="img-width">
-                        <div class="flex-container-cart-text">
-                            <h4>Laborum Cabernet Sauvignon</h4>
-                            <div class="flex-container-cart-product">
-                                <a href=""><button class="btn-body mx-3">-</button></a>
-                                <p class="mx-3">1</p>
-                                <a href=""><button class="btn-body mx-3">+</button></a>
-                                <a href=""><button class="btn-body mx-3"><img src="public/images/iconos/ico-delete.svg" alt="" class="w-16"></button></a>
+                <thead>
+                    <tr>
+                        <th>Productos</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody class="DOMcarrito" id="carrito">
+                    <tr>
+                        <td class="flex-container-cart-product">
+                            <img src="public/images/106-laborum-cabernet-sauvignon.jpg" alt="" class="img-width">
+                            <div class="flex-container-cart-text">
+                                <h4>Laborum Cabernet Sauvignon</h4>
+                                <div class="flex-container-cart-product">
+                                    <button class="btn-carrito"><img src="public/images/iconos/ico-minun.svg" alt="" class="w-24"></button>
+                                    <p class="mx-3">1</p>
+                                    <button class="btn-carrito"><img src="public/images/iconos/ico-plus.svg" alt="" class="w-24"></button>
+                                    <button class="btn-carrito"><img src="public/images/iconos/ico-delete.svg" alt="" class="w-24"></button>
+                                </div>
                             </div>
-                        </div>
-                    </td>
-                    <td>$2200</td>
-                </tr>
-                <tr>
-                    <td class="flex-container-cart-product">
-                        <img src="public/images/106-laborum-cabernet-sauvignon.jpg" alt="" class="img-width">
-                        <div class="flex-container-cart-text">
-                            <h4>Laborum Cabernet Sauvignon</h4>
-                            <div class="flex-container-cart-product">
-                                <a href=""><button class="btn-body mx-3">-</button></a>
-                                <p class="mx-3">1</p>
-                                <a href=""><button class="btn-body mx-3">+</button></a>
-                                <a href=""><button class="btn-body mx-3"><img src="public/images/iconos/ico-delete.svg" alt="" class="w-16"></button></a>
-                            </div>
-                        </div>
-                    </td>
-                    <td>$2200</td>
-                </tr>
-                <tr>
-                    <td class="flex-container-cart-product">
-                        <img src="public/images/106-laborum-cabernet-sauvignon.jpg" alt="" class="img-width">
-                        <div class="flex-container-cart-text">
-                            <h4>Laborum Cabernet Sauvignon</h4>
-                            <div class="flex-container-cart-product">
-                                <a href=""><button class="btn-body mx-3">-</button></a>
-                                <p class="mx-3">1</p>
-                                <a href=""><button class="btn-body mx-3">+</button></a>
-                                <a href=""><button class="btn-body mx-3"><img src="public/images/iconos/ico-delete.svg" alt="" class="w-16"></button></a>
-                            </div>
-                        </div>
-                    </td>
-                    <td>$2200</td>
-                </tr>
+                        </td>
+                        <td>
+                            <p>$2200</p>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
+            <div class="flex-subtotal">
+                <p>Total: <span id="total"></span>&dollar;;</p>
+                <button id="boton-vaciar" class="btn btn-body">VACIAR CARRITO</button>
+            </div>
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
     <script src="/js/toggle-menu.js"></script>
     <script src="/js/carrito.js"></script>
+    <script type="module" src="/js/addCart.js"></script>
 </body>
 <footer>
     <%- include('./partials/footer'); %>

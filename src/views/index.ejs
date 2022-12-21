@@ -53,15 +53,15 @@
                 <button aria-label="anterior" class="carousel_prev">
                     <img src="/images/iconos/ico-previous.svg" alt="Anterior">
                 </button>
-                <div class="carousel_list" id="contenedor_productos">
+                <div class="carousel_list">
                 <% Outstandingproducts.forEach(product => { %>
-                    <div class="carousel_element mx-3 items">
+                    <div class="carousel_element mx-3 items" id="contenedor_producto">
                         <div class="bg-white flex-container-products">
-                            <img src="/images/<%- product.foto %>" alt="">
-                            <h3><%-product.producto %></h3>
-                            <p>Precio: <%- product.precio %></p>
-                            <div class="flex-container-products-btn btn-compra">
-                                <a href="#" class="btn-body mx-3 w-30"><img src="/images/iconos/ico-cart-shop-products.svg" alt="" class="w-24"></a>
+                            <img src="/images/<%- product.foto %>" alt="" id="itemFoto">
+                            <h3 id="itemProducto"><%-product.producto %></h3>
+                            <p>Precio: <span id="itemPrecio"><%- product.precio %></span></p>
+                            <div class="flex-container-products-btn">
+                                <a href="#" class="btn-body mx-3 w-30" marcador="<%- product.id %>" id="btn-compra"><img src="/images/iconos/ico-cart-shop-products.svg" alt="" class="w-24"></a>
                                 <a href="/products/<%- product.id %>" class="btn-body mx-3 w-70">Ver Más</a>
                             </div>
                         </div>
@@ -79,7 +79,7 @@
     <script src="../public/lib/Glider.js-master/glider.min.js"></script>
     <script src="../public/lib/Glider.js-master/carousel_glider.js"></script>
     <script src="../public/js/toggle-menu.js"></script>
-    <script src="../../public/js/addCart.js"></script>
+    <script type="module" src="../../public/js/addCart.js"></script>
 </body>
 <footer>
     <%- include('./partials/footer'); %>

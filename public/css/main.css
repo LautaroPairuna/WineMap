@@ -5,6 +5,12 @@
     transition: all 0.3s;
     font-family: 'Roboto', sans-serif;
 }
+body{
+    margin: 0;
+}
+form{
+    margin: 0;
+}
 nav ul li {
     list-style: none;
     transition: all 0.3s;
@@ -303,6 +309,11 @@ nav ul li {
     border-radius: 10px;
     padding: 20px;
 }
+.btn-carrito{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 .flex-container-table{
     display: flex;
     width: 90%
@@ -344,6 +355,19 @@ td{
 }
 table{
     width: 100%;
+}
+.flex-subtotal{
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+}
+
+#carritoMovil{
+    display: none;
+}
+
+#carritoDesk{
+    display: block;
 }
 /* -----------------------------------------------------------------------------------------------  
    LOGIN Y REGISTER - PARTE TRASERA
@@ -587,6 +611,10 @@ table{
 .mx-3{
     margin-inline: 10px;
 }
+
+.mx-3-carrito{
+    margin-inline: 10px;
+}
 .m-3{
     margin: 7px;
 }
@@ -627,13 +655,13 @@ table{
     width: 80%;
 }
 .w-90{
-    width: 90%;
+    width: 85%;
 }
-.w-32{
-    width: 32px;
+.w-36{
+    width: 36px;
 }
 .w-24{
-    width: 24px;
+    width: 28px;
 }
 .w-18{
     width: 18px;

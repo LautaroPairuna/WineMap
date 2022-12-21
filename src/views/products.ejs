@@ -14,20 +14,22 @@
         </div>
         <div class="container-products">
             <% allProducts.forEach(product => { %>
-                <div class="bg-white flex-container-products m-3 w-72" id="contenedor_productos">
-                    <img src="/images/<%- product.foto %>" alt="">
-                    <h4><%-product.producto %></h3>
-                    <p>Precio: <%- product.precio %></p>
-                    <div class="flex-container-products-btn btn-compra">
-                        <a href="" class="btn-body mx-3 w-30"><img src="/images/iconos/ico-cart-shop-products.svg" alt="" class="w-24"></a>
-                        <a href="/products/<%- product.id %>" class="btn-body mx-3 w-70">Ver Más</a>
+                <div class="carousel_element m-3 w-72 items" id="contenedor_producto">
+                    <div class="bg-white flex-container-products">
+                        <img src="/images/<%- product.foto %>" alt="" id="itemFoto">
+                        <h4 id="itemProducto"><%-product.producto %></h4>
+                        <p id="itemPrecio">Precio: <span id="itemPrecio"><%- product.precio %></span></p>
+                        <div class="flex-container-products-btn">
+                            <a href="#" class="btn-body mx-3 w-30" id="btn-compra"><img src="/images/iconos/ico-cart-shop-products.svg" alt="" class="w-24"></a>
+                            <a href="/products/<%- product.id %>" class="btn-body mx-3 w-70">Ver Más</a>
+                        </div>
                     </div>
                 </div>
             <% }) %>
         </div>
     </section>
     <script src="/js/toggle-menu.js"></script>
-    <script src="/js/addCart.js"></script>
+    <script type="module" src="/js/addCart.js"></script>
 </body>
 <footer>
     <%- include('./partials/footer'); %> 

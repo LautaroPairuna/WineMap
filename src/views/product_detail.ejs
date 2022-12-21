@@ -8,21 +8,19 @@
 </header>
 <body>
     <section class="bg-categorias">
-        <div class="flex-container-products">
-            <div class="flex-container mb-3">
-                <div class="flex-container-products-detail-img w-40">
-                    <img src="/images/<%- product_query.foto %>" alt="" class="img-home img-detail-product-width">
-                </div>
-                <div class="flex-container-products-detail text-white w-60">
-                    <h3 class="product-detail-title"><%- product_query.producto %></h3>
-                    <p class="product-detail-text">Precio: <%- product_query.precio %></p>
-                    <!-- <p class="product-detail-text">Stock: 27</p> -->
-                    <div class="flex-container-products-detail-btn">
-                        <a href="" class="btn-body mx-3">-</a>
-                        <p class="mx-3">1</p>
-                        <a href="" class="btn-body mx-3">+</a>
-                        <a href="" class="btn-body mx-3"><img src="/images/iconos/ico-cart-shop-products.svg" alt="" class="w-24"></a>
-                    </div>
+        <div class="flex-container mb-3" id="contenedor_producto">
+            <div class="flex-container-products-detail-img w-40">
+                <img src="/images/<%- product_query.foto %>" alt="" class="img-home img-detail-product-width" id="itemFoto">
+            </div>
+            <div class="flex-container-products-detail text-white w-60">
+                <h3 class="product-detail-title" id="itemProducto"><%- product_query.producto %></h3>
+                <p class="product-detail-text">Precio: <span id="itemPrecio"><%- product_query.precio %></span></p>
+                <!-- <p class="product-detail-text">Stock: 27</p> -->
+                <div class="flex-container-products-detail-btn">
+                    <button class="btn-carrito mx-3"><img src="/images/iconos/ico-minun.svg" alt="" class="w-36"></button>
+                    <p class="mx-3"><span id="itemCantidad">1</span></p>
+                    <button class="btn-carrito mx-3"><img src="/images/iconos/ico-plus.svg" alt="" class="w-36"></button>
+                    <button class="btn-carrito mx-3" id="btn-compra"><img src="/images/iconos/ico-cart-shop-products-detail.svg" alt="" class="w-36"></button>
                 </div>
             </div>
         </div>
@@ -36,15 +34,15 @@
                 <button aria-label="anterior" class="carousel_prev">
                     <img src="/images/iconos/ico-previous.svg" alt="Anterior">
                 </button>
-                <div class="carousel_list" id="contenedor_productos">
+                <div class="carousel_list">
                 <% productsList.forEach(product => { %>
-                    <div class="carousel_element mx-3">
+                    <div class="carousel_element mx-3 items" id="contenedor_producto">
                         <div class="bg-white flex-container-products">
-                            <img src="/images/<%- product.foto %>" alt="">
-                            <h3><%-product.producto %></h3>
-                            <p>Precio: <%- product.precio %></p>
+                            <img src="/images/<%- product.foto %>" alt="" id="itemFoto">
+                            <h4 id="itemProducto"><%-product.producto %></h4>
+                            <p id="itemPrecio">Precio: <span id="itemPrecio"><%- product_query.precio %></span></p>
                             <div class="flex-container-products-btn">
-                                <a href="" class="btn-body mx-3 w-30"><img src="/images/iconos/ico-cart-shop-products.svg" alt="" class="w-24"></a>
+                                <a href="#" class="btn-body mx-3 w-30" id="btn-compra"><img src="/images/iconos/ico-cart-shop-products.svg" alt="" class="w-24"></a>
                                 <a href="/products/<%- product.id %>" class="btn-body mx-3 w-70">Ver Más</a>
                             </div>
                         </div>
@@ -62,6 +60,7 @@
     <script src="/lib/Glider.js-master/glider.min.js"></script>
     <script src="/lib/Glider.js-master/carousel_glider.js"></script>
     <script src="/js/toggle-menu.js"></script>
+    <script type="module" src="/js/addCart.js"></script>
 </body>
 <footer>
     <%- include('./partials/footer'); %>

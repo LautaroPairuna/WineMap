@@ -135,6 +135,9 @@
         flex-direction: row;
         align-items: center;
     }
+    .bg-form{
+        width: 100%
+    }
     .img-width{
         width: 100px;
     }
@@ -142,6 +145,18 @@
         display: flex;
         justify-content: start;
         align-items: center;
+    }
+
+    #carritoMovil{
+        display: block;
+    }
+
+    #carritoDesk{
+        display: none;
+    }
+    
+    .mx-3-carrito{
+        margin-inline: 5px;
     }
 }
 @media (max-width: 600px){
