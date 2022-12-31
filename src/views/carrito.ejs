@@ -9,88 +9,32 @@
 <body>
     <section class="bg-categorias flex-container-cart">
 
-        <!-- Carrito para escritorio -->
-
-        <div class="bg-carrito w-90" id="carritoDesk">
+        <div class="bg-carrito">
             <h2>Carrito</h2>
             <table>
                 <thead>
                     <tr>
                         <th class="w-60">Productos</th>
-                        <th class="w-40 padding-amount">Cantidad</th>
-                        <th>Precio</th>
+                        <th class="w-40 padding-amount carrito-desk">Cantidad</th>
+                        <th class="w-20">Subtotal</th>
                     </tr>
                 </thead>
                 <tbody class="DOMcarrito" id="carrito">
                     <tr>
-                        <td class="flex-container-cart-product">
-                            <img src="public/images/106-laborum-cabernet-sauvignon.jpg" alt="" class="img-width">
-                            <div class="flex-container-cart-text">
-                                <h4>Laborum Cabernet Sauvignon</h4>
-                                <p>Precio: $2200</p>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="flex-container-cart-product">
-                                <button class="btn-carrito"><img src="public/images/iconos/ico-minun.svg" alt="" class="w-24"></button>
-                                <p class="mx-3">1</p>
-                                <button class="btn-carrito"><img src="public/images/iconos/ico-plus.svg" alt="" class="w-24"></button>
-                                <button class="btn-carrito"><img src="public/images/iconos/ico-delete.svg" alt="" class="w-24"></button>
-                            </div>
-                        </td>
-                        <td>
-                            <p>$2200</p>
-                        </td>
+                        
                     </tr>
                 </tbody>
             </table>
             <div class="flex-subtotal">
-                <p class="text-right">Total: <span id="total"></span>&dollar;;</p>
-                <button id="boton-vaciar" class="btn btn-body">VACIAR CARRITO</button>
-            </div>
-        </div>
-
-        <!-- Carriro para movil -->
-
-        <div class="bg-carrito w-90" id="carritoMovil">
-            <h2>Carrito</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Productos</th>
-                        <th>Precio</th>
-                    </tr>
-                </thead>
-                <tbody class="DOMcarrito" id="carrito">
-                    <tr>
-                        <td class="flex-container-cart-product">
-                            <img src="public/images/106-laborum-cabernet-sauvignon.jpg" alt="" class="img-width">
-                            <div class="flex-container-cart-text">
-                                <h4>Laborum Cabernet Sauvignon</h4>
-                                <div class="flex-container-cart-product">
-                                    <button class="btn-carrito"><img src="public/images/iconos/ico-minun.svg" alt="" class="w-24"></button>
-                                    <p class="mx-3">1</p>
-                                    <button class="btn-carrito"><img src="public/images/iconos/ico-plus.svg" alt="" class="w-24"></button>
-                                    <button class="btn-carrito"><img src="public/images/iconos/ico-delete.svg" alt="" class="w-24"></button>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <p>$2200</p>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="flex-subtotal">
-                <p>Total: <span id="total"></span>&dollar;;</p>
+                <p class="text-right total">Total:<span id="total"></span></p>
                 <button id="boton-vaciar" class="btn btn-body">VACIAR CARRITO</button>
             </div>
         </div>
     </section>
+
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
     <script src="/js/toggle-menu.js"></script>
-    <script src="/js/carrito.js"></script>
-    <script type="module" src="/js/addCart.js"></script>
+    <script src="/js/cart.js"></script>
 </body>
 <footer>
     <%- include('./partials/footer'); %>

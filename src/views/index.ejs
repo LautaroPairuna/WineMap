@@ -61,7 +61,7 @@
                             <h3 id="itemProducto"><%-product.producto %></h3>
                             <p>Precio: <span id="itemPrecio"><%- product.precio %></span></p>
                             <div class="flex-container-products-btn">
-                                <a href="#" class="btn-body mx-3 w-30" marcador="<%- product.id %>" id="btn-compra"><img src="/images/iconos/ico-cart-shop-products.svg" alt="" class="w-24"></a>
+                                <button class="btn-body mx-3 w-30" id="btn-compra" data-id="<%- product.id %>"><img src="/images/iconos/ico-cart-shop-products.svg" alt="" class="w-24"></button>
                                 <a href="/products/<%- product.id %>" class="btn-body mx-3 w-70">Ver Más</a>
                             </div>
                         </div>
@@ -79,7 +79,7 @@
     <script src="../public/lib/Glider.js-master/glider.min.js"></script>
     <script src="../public/lib/Glider.js-master/carousel_glider.js"></script>
     <script src="../public/js/toggle-menu.js"></script>
-    <script type="module" src="../../public/js/addCart.js"></script>
+    <script src="../../public/js/addCart.js"></script>
 </body>
 <footer>
     <%- include('./partials/footer'); %>

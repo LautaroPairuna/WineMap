@@ -140,6 +140,7 @@ nav ul li {
     border: none;
     text-decoration: none;
     text-align: center;
+    cursor: pointer;
 }
 /* -----------------------------------------------------------------------------------------------  
    CATEGORIAS
@@ -362,12 +363,14 @@ table{
     flex-direction: column;
 }
 
-#carritoMovil{
+.carrito-movil{
     display: none;
 }
 
-#carritoDesk{
-    display: block;
+.carrito-desk{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* -----------------------------------------------------------------------------------------------  
    LOGIN Y REGISTER - PARTE TRASERA
@@ -662,6 +665,10 @@ table{
 }
 .w-24{
     width: 28px;
+}
+
+.w-32{
+    width: 32px;
 }
 .w-18{
     width: 18px;

@@ -20,7 +20,7 @@
                         <h4 id="itemProducto"><%-product.producto %></h4>
                         <p id="itemPrecio">Precio: <span id="itemPrecio"><%- product.precio %></span></p>
                         <div class="flex-container-products-btn">
-                            <a href="#" class="btn-body mx-3 w-30" id="btn-compra"><img src="/images/iconos/ico-cart-shop-products.svg" alt="" class="w-24"></a>
+                            <button class="btn-body mx-3 w-30" id="btn-compra" productId="<%- product.id %>"><img src="/images/iconos/ico-cart-shop-products.svg" alt="" class="w-24"></button>
                             <a href="/products/<%- product.id %>" class="btn-body mx-3 w-70">Ver Más</a>
                         </div>
                     </div>

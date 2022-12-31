@@ -1,6 +1,5 @@
-const users = require('../models').usuario
+const users = require('../models').Admin
 const bcrypt = require('bcrypt')
-const session = require('express-session')
 const { validationResult } = require('express-validator')
 
 async function newUser(req, res) {
@@ -34,7 +33,7 @@ async function newUser(req, res) {
     
                 let usuario = await users.create ({nombre_completo, email, contrasena})
     
-                return res.status(200).redirect('/authentication')
+                return res.status(200).send(usuario)
                 
     
             })
@@ -71,22 +70,16 @@ async function login(req, res) {
 
             }else{
 
-                req.session.email = email_login
-
-                console.log(req.session)
-
                 return res.status(200).redirect('/')
 
             }
 
         }else{
 
-            return res.status(404).redirect('/authentication')
-            
+            return res.send('Este usuario no existe!')
 
         }
 
-        
 
     }catch (error) {
 

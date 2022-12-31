@@ -18,7 +18,6 @@ const getAllProducts = async (req, res) => {
 
 }
 
-
 const getProductDetail = async (req, res) => {
 
     try{
@@ -72,5 +71,125 @@ const getOutstandingProductsList = async (req, res) => {
 
 }
 
+//API CONTROLLERS
 
-module.exports = {getAllProducts, getProductDetail, getOutstandingProductsList}
+const getProducts = async (req, res) => {
+    
+    const listProduct = await products.findAll()
+
+    res.json(listProduct)
+
+}
+
+const getProduct = async (req, res) => {
+
+    const { id } = req.params ;
+
+    const product = await products.findOne({
+        where: {
+            id: id
+        }
+    })
+
+    if(product) {
+        res.json(product)
+    }else{
+
+        res.status(404).json({
+            msg: `No existe un producto con el id ${id}`
+        }) 
+    }
+
+}
+
+
+const deleteProduct = async (req, res) => {
+
+    const { id } = req.params ;
+
+    const product = await products.findOne({
+        where: {
+            id: id
+        }
+    })
+
+    if(!product) {
+
+        res.status(404).json({
+            msg: `No existe un producto con el id ${id}`
+        }) 
+
+    }else{
+
+        await product.destroy()
+        res.json({
+            msg: 'El producto fue eliminado con exito!'
+        })
+    }
+
+}
+
+const postProduct = async (req, res) => {
+
+    try{
+
+        await products.create(req.body);
+
+        res.json({
+            msg: 'El producto fue creado con exito!'
+        })
+
+    } catch (error) {
+
+        console.log(error)
+
+        res.json({
+            msg: 'Upps ocurrio un error, por favor comuniquese con el Soporte para brindarle una solucion'
+        })
+
+    }
+
+}
+
+const updateProduct = async (req, res) => {
+
+    try{
+
+        const { id } = req.params ;
+
+        const product = await products.findOne({
+            where: {
+                id: id
+            }
+        })
+
+        if(!product) {
+
+            res.status(404).json({
+                msg: `No existe un producto con el id ${id}`
+            }) 
+            
+        }else{
+
+            await product.update(req.body);
+
+            res.json({
+                msg: `El producto con el id ${id} ha sido actualizado correctamente!`
+            })
+
+        }
+
+    }catch (error) {
+
+        console.log(error)
+
+        res.json({
+            msg: 'Upps ocurrio un error, por favor comuniquese con el Soporte para brindarle una solucion'
+        })
+
+    }
+
+}
+
+
+module.exports = {getAllProducts, getProductDetail, getOutstandingProductsList, getProducts, getProduct, postProduct, deleteProduct, updateProduct}

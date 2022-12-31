@@ -6,4 +6,5 @@ router.get('/', getAllProducts)
 
 router.get('/:id', getProductDetail)
 
+
 module.exports = router;
