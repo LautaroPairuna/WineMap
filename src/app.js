@@ -25,7 +25,11 @@ app.use(session({
 }))
 app.use(flash());
 
-app.use(cors())
+app.use(cors({
+    origin: 'http://localhost:4200',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}))
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(express.json())
 app.use(bodyParser.json())
@@ -36,7 +40,7 @@ app.use(require ('./routes/contacto'))
 app.use(require ('./routes/authenticateRoutes'))
 app.use('/products', require('./routes/productsRoutes'))
 app.use('/', require('./routes/index'))
-app.use('/api/', require('./routes/ApiRoutes'))
+app.use('/api', require('./routes/ApiRoutes'))
     
 app.listen(port, function() {
     console.log('Servidor iniciado en puerto: ' + port)
